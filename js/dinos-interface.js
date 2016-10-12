@@ -11,4 +11,5 @@ $(document).ready(function() {
     var words = parseInt($('#words').val());
     myDinos.getDinosText(paragraphs, words, displayDinoBlogEntry);
   });
+
 });
