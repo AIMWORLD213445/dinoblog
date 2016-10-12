@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Dino-Blog!</title>
+  </head>
+  <body>
+    <div class="container box">
+      <div class="jumbotron">
+        <h1>Dino-Blog!</h1>
+      </div>
+      <h2>Dino Dave's Lat/Long Finder!</h2>
+      <form id="latlong-generator">
+        <div class="form-group">
+          <input class="form-control" type="text" id="address" required placeholder="What's your address?">
+        </div>
+        <button class="btn btn-default" type="submit" id="generateLatLong">Get Latitude &amp; Longitude!</button>
+      </form>
+      <hr>
+      <p>Latitude: <span class="#lat-data"></span></p>
+      <p>Longitude: <span class="#lng-data"></span></p>
+      <hr>
+      <a href="dinomap.html">Where Is Dino Dave?</a>
+    </div>
+  </body>
+</html>
