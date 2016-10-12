@@ -1,3 +1,6 @@
+var googleMapsKey = require('./../.env').googleMapsApiKey;
+
+
 BikeFinder = function(){
 }
 
@@ -9,5 +12,15 @@ BikeFinder.prototype.getStolenBikes = function(lat, lng, displayFunction) {
     $('.showStolenBikes').text(error);
   });
 }
+
+BikeFinder.prototype.getBikeShops = function(lat, lng, displayFunction) {
+  $.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + lat + ',' + lng +'&radius=10000&type=bicycle_store&key='+googleMapsKey).then(function(response) {
+    displayFunction(response.results);
+  }).fail(function(error) {
+    console.log(error);
+    $('.showBikeShops').text(error);
+  });
+}
+
 
 exports.bikeFinderModule = BikeFinder;

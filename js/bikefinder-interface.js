@@ -11,6 +11,16 @@ var displayStolenBikes = function(stolenBikes) {
   }
 }
 
+var displayBikeShops = function(bikeShops) {
+  $('#bike-shops').empty();
+  for (var i = 0; i < bikeShops.length; i++) {
+    var name = bikeShops[i].name;
+    var location = bikeShops[i].vicinity;
+    $('#bike-shops').append('<li class="list-group-item">'+ name +' (' + location + ')</li>');
+  }
+}
+
+
 $(document).ready(function() {
 
   var mybikeFinder = new BikeFinder();
@@ -19,6 +29,12 @@ $(document).ready(function() {
     var lat = $('#lat-data').text();
     var lng = $('#lng-data').text();
     mybikeFinder.getStolenBikes(lat, lng, displayStolenBikes);
+  });
+
+  $('#find-bike-shops').click(function() {
+    var lat = $('#lat-data').text();
+    var lng = $('#lng-data').text();
+    mybikeFinder.getBikeShops(lat, lng, displayBikeShops);
   });
 
 });
