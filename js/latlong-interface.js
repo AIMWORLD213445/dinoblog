@@ -3,6 +3,7 @@ var latLong = require('./../js/latlong.js').latLongModule;
 var displayLatLong = function(lat, lng) {
   $('#lat-data').text(lat);
   $('#lng-data').text(lng);
+  $('#find-stolen-bikes').show();
 }
 
 $(document).ready(function() {
