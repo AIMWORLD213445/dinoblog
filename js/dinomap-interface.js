@@ -7,7 +7,6 @@ $( document ).ready(function() {
   var script=document.createElement('script');
   script.type='text/javascript';
   script.src=mapScriptUrl;
-
   $("#dino-map").append(script);
 
   $('#whereIsDave').click(locateDino);

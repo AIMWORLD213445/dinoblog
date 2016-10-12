@@ -6,10 +6,14 @@ var displayLatLong = function(lat, lng) {
 }
 
 $(document).ready(function() {
-  var mylatLong = new latLong();
+
+  var mylatLong = new LatLong();
+
   $('#latlong-generator').submit(function(event) {
     event.preventDefault();
     var address = $('#address').val();
+    $('#queried-location').text(address);
     mylatLong.getLatLong(address, displayLatLong);
   });
+
 });
