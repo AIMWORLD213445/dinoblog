@@ -4,6 +4,7 @@ var displayLatLong = function(lat, lng) {
   $('#lat-data').text(lat);
   $('#lng-data').text(lng);
   $('#find-stolen-bikes').show();
+  $('#find-bike-shops').show();
 }
 
 $(document).ready(function() {
